@@ -1,0 +1,43 @@
+
+.loginButton {
+    background: linear-gradient(180deg, #07B3E0 25%, #80E4FF 100%);
+    border-radius: 4px;
+    width: 140px;
+    height: 37px;
+    color: white;
+    border: 0;
+    margin: 13px;
+    cursor: pointer;
+
+  }
+
+.loginButton:hover {
+    background: linear-gradient(180deg, #80E4FF 25%, #07B3E0 100%);
+}
+
+.signInButton {
+    background: #CFD8DC;
+    border-radius: 4px;
+    width: 140px;
+    height: 37px;
+    color: white;
+    border: 0;
+    margin: 13px;
+    margin-left: 3px;
+    cursor: pointer;
+  }
+
+.signInButton:hover {
+    background: linear-gradient(180deg, #07B3E0 25%, #80E4FF 100%);
+}
+
+.signOutButton {
+    background: linear-gradient(180deg, #07B3E0 25%, #80E4FF 100%);
+    border-radius: 4px;
+    width: 140px;
+    height: 37px;
+    color: white;
+    border: 0;
+    margin: 13px;
+    cursor: pointer;
+}

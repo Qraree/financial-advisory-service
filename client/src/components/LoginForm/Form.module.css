@@ -1,0 +1,62 @@
+.container {
+    width: 529px;
+    height: 515px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 50px rgba(58, 182, 236, 0.37);
+    border-radius: 50px;
+    font-family: 'Inter', serif;
+    padding: 0;
+}
+
+.logo {
+    margin-top: 20px;
+}
+
+.textName {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    color: #000000;
+    margin-left: 13px;
+    margin-top: 20px;
+}
+
+.containerLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.textInst {
+    font-size: 20px;
+    margin-right: 50px;
+    margin-bottom: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.textInfo {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 400;
+    margin-right: 232px;
+    margin-bottom: 6px;
+}
+
+.footer {
+    width: 529px;
+    height: 60px;
+    background-color: #F3F5F6;
+    border-radius: 0px 0px 50px 50px;
+    margin-top: 23px;
+}

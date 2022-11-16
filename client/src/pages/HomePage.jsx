@@ -1,15 +1,17 @@
 import React from 'react';
-import Button from "../components/Button/Button";
 import {useDispatch} from "react-redux";
-import {isUserAuth} from "../features/userSlice";
+import Style from './HomePage.module.css'
+import Navbar from "../components/Navbar/Navbar";
+import Header from "../components/Header/Header";
 
 const HomePage = () => {
     const dispatch = useDispatch()
     return (
-        <div>
-            <Button
-                classname={'signOutButton'}
-                onClick={() => dispatch(isUserAuth(false))}>Назад</Button>
+        <div className={Style.mainWrapper}>
+            <div className={Style.content}>
+            <Navbar/>
+            <Header/>
+            </div>
         </div>
     );
 };

@@ -1,0 +1,29 @@
+.cell {
+   height: 100%;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    /*border: 2px solid black;*/
+    font-family: 'Inter', serif;
+    justify-content: center;
+
+
+}
+
+.firstLine {
+    height: 45%;
+    /*border: 2px solid black;*/
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.secondLine {
+    height: 45%;
+    /*border: 2px solid black;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

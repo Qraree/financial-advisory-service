@@ -11,6 +11,9 @@ const HomePage = () => {
             <div className={Style.content}>
             <Navbar/>
             <Header/>
+            <div className={Style.header}>
+                <h1>Аналитика</h1>
+            </div>
             </div>
         </div>
     );

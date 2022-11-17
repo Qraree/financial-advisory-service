@@ -9,6 +9,7 @@
     padding: 10px;
     box-sizing: border-box;
     align-items: center;
+    margin-top: -1px;
 }
 
 .logo {

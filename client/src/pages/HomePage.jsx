@@ -6,28 +6,49 @@ import Navbar from "../components/Navbar/Navbar";
 import Header from "../components/Header/Header";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import Stock from "../components/Stock/Stock";
+import Input from "../components/Input/Input";
+import Button from "../components/Button/Button";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 
 const HomePage = () => {
-    const [stockList, setStockList] = useState([{stock: 'hello', value: 15}])
+    const [stockList, setStockList] = useState([{stock: 'Газпром', value: 15}])
     const [stock, setStock] = useState('')
-    const [value, setValue] = useState('')
-
-
-
+    const [value, setValue] = useState(0)
     const [sum, setSum] = useState(0)
 
 
     const data = {
-        labels: ['hello'],
+        labels: stockList.map(stock => stock.stock),
         datasets: [
             {
-                backgroundColor: 'rgba(75,192,192,1)',
-                borderColor: 'rgba(0,0,0,1)',
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(238,230,55,0.2)',
+                    'rgba(33,245,128,0.34)',
+                    'rgba(102,255,242,0.2)',
+                    'rgba(230,64,255,0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(238,230,55,1)',
+                    'rgba(33,245,128,1)',
+                    'rgba(102,255,242,1)',
+                    'rgba(230,64,255,1)',
+                ],
                 borderWidth: 2,
-                data: [15],
+                data: stockList.map(stock => stock.value),
 
             },
         ],
@@ -46,12 +67,12 @@ const HomePage = () => {
     }, [stockList])
 
     function addStock() {
+        if (value < 1 || /[^0-9]/.test(String(value))) {
+            return alert('Введите положительное количество акций')
+        }
         if (stockList.length !== 10) {
             setStockList([...stockList, {stock: stock, value: value}])
             setStock('')
-            setValue('')
-            data.labels.push(stock)
-            data.datasets.push(Number(value))
         } else {
             alert('Не больше 10 позиций в портфеле')
         }
@@ -78,12 +99,29 @@ const HomePage = () => {
                     <Doughnut data={data} width={"200px"} height={"200px"} options={{ maintainAspectRatio: false }}/>
                     </div>
                     <div className={Style.stockList}>
-                        <input type={'text'} value={stock} onChange={(e) => stockInput(e)} placeholder={'Название'}/>
-                        <input type={'text'} value={value} onChange={(e) => valueInput(e)} placeholder={'Количество'}/>
-                        <button onClick={addStock}>Add stock</button>
-                        {stockList.map(stock => (
-                            <Stock name={stock.stock} value={Math.round(stock.value / sum * 100 * 10) / 10} />
-                        ))}
+                        <h2>Акции</h2>
+                        <div className={Style.inputs}>
+                            <Input
+                                type={'text'}
+                                value={stock}
+                                onChange={(e) => stockInput(e)}
+                                className={"stockInput"}
+                                placeholder={"Название"}
+                            />
+                            <Input
+                                type={'text'}
+                                value={value}
+                                onChange={(e) => valueInput(e)}
+                                className={"stockInput"}
+                                placeholder={"Количество"}
+                            />
+                        </div>
+                        <Button onClick={addStock} className={"buyStock"}>Купить</Button>
+                        <div className={Style.stockMap}>
+                            {stockList.map(stock => (
+                                <Stock name={stock.stock} value={Math.round(stock.value / sum * 100 * 10) / 10} />
+                            ))}
+                        </div>
 
                     </div>
                 </div>

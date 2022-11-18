@@ -56,3 +56,20 @@
 .chatButton:hover {
     background: linear-gradient(180deg, #07B3E0 25%, #80E4FF 100%);
 }
+
+.buyStock {
+    background: linear-gradient(180deg, #0297BE 25%, #25D1FF 100%);
+    border-radius: 4px;
+    width: 100px;
+    height: 30px;
+    color: white;
+    border: 0;
+    margin: 10px auto;
+    display: block;
+    cursor: pointer;
+}
+
+.buyStock:hover {
+    background: linear-gradient(180deg, #07B3E0 25%, #80E4FF 100%);
+
+}

@@ -14,7 +14,7 @@ const Header = () => {
                     <InfoCell firstLine={"2M"} secondLine={"bruh"}/>
                     <InfoCell firstLine={"13"} secondLine={"nice"}/>
                 </div>
-                <Button type={"chatButton"}>Персональный менеджер</Button>
+                <Button className={"chatButton"}>Персональный менеджер</Button>
             </div>
         </div>
     );

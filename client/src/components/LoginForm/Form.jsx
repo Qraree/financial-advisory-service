@@ -42,10 +42,10 @@ const Form = (props) => {
               value={password}
               className={"input"}/>
           <div>
-              <Button type="loginButton" onClick={(e) => onLoginHandler(e)}>
+              <Button className="loginButton" onClick={(e) => onLoginHandler(e)}>
                   Войти
               </Button>
-              <Button type="signInButton">
+              <Button className="signInButton">
                   Зарегистироваться
               </Button>
           </div>

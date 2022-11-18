@@ -18,3 +18,8 @@ body {
 
 }
 
+h2 {
+  font-family: 'Inter', serif;
+  text-align: center;
+  margin: 0;
+}

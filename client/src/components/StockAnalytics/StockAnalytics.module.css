@@ -1,0 +1,40 @@
+.headerDiv {
+    /*border: 2px solid black;*/
+    width: 200px;
+    height: 70px;
+    margin: auto;
+}
+
+.chart {
+    width: 300px;
+    height: 300px;
+    margin-left: 100px;
+}
+
+.dataSection {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+
+}
+
+.stockList {
+    width: 350px;
+    height: 300px;
+    /*border: 2px solid black;*/
+    padding: 15px   ;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.stockMap {
+    width: 100%;
+    margin-bottom: 40px;
+}

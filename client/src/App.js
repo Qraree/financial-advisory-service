@@ -4,8 +4,8 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
-import AuthPage from "./pages/AuthPage";
-import HomePage from "./pages/HomePage";
+import AuthPage from "./pages/AuthPage/AuthPage";
+import HomePage from "./pages/HomePage/HomePage";
 import { useSelector } from "react-redux";
 
 function App() {

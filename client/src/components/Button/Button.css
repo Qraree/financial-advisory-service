@@ -67,6 +67,7 @@
     margin: 10px auto;
     display: block;
     cursor: pointer;
+    margin-bottom: 40px;
 }
 
 .buyStock:hover {

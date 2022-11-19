@@ -1,0 +1,16 @@
+.messageContainer {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.message {
+    color: #FFFFFF;
+    background-color: #3AB6EC;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 50%;
+    font-size: 18px;
+    font-family: 'Inter', serif;
+}

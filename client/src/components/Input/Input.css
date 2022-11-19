@@ -1,14 +1,11 @@
 .input {
     box-sizing: border-box;
     width: 296px;
-    height: 34.14px;
-
+    height: 34px;
     background: rgba(217, 217, 217, 0.15);
     border: 1px solid #D9D9D9;
     border-radius: 4px;
-    margin: 13px;
-    margin-top: 0px;
-    margin-bottom: 10px;
+    margin: 0 13px 0 13px;
 }
 
 .stockInput {
@@ -19,4 +16,13 @@
 
 .stockInput:focus {
     outline: none;
+}
+
+.chatInput {
+    box-sizing: border-box;
+    width: 700px;
+    height: 55px;
+    background: #F0F4F7;
+    border: 2px solid #D9D9D9;
+    border-radius: 4px;
 }

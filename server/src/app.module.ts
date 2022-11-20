@@ -9,6 +9,7 @@ import { RolesModule } from './roles/roles.module';
 import {Role} from "./roles/roles.model";
 import { AuthModule } from './auth/auth.module';
 import {UserRoles} from "./roles/userRoles.model";
+import { AppGateway } from './app.gateway';
 
 
 @Module({
@@ -31,6 +32,6 @@ import {UserRoles} from "./roles/userRoles.model";
     AuthModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, AppGateway],
 })
 export class AppModule {}

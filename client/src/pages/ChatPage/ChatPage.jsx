@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Styles from './ChatPage.module.css'
 import Navbar from "../../components/Navbar/Navbar";
 import Message from "../../components/Message/Message";
 import Input from "../../components/Input/Input";
 
+const ws = new WebSocket()
+
 const ChatPage = () => {
 
+    useEffect(() => {
+        ws.addEventListener('message')
+    }, [])
     const messages = [
         {
             id: '1a',

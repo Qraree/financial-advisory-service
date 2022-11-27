@@ -4,12 +4,17 @@ import Navbar from "../../components/Navbar/Navbar";
 import Message from "../../components/Message/Message";
 import Input from "../../components/Input/Input";
 
-const ws = new WebSocket()
+// const ws = new WebSocket()
 
 const ChatPage = () => {
 
     useEffect(() => {
-        ws.addEventListener('message')
+        const ws = new WebSocket('http://localhost:5000')
+        ws.onopen = () => {
+            ws.send(JSON.stringify( {
+                message: "Hello"
+            }))
+        }
     }, [])
     const messages = [
         {

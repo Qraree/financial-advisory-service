@@ -10,6 +10,7 @@ import {Role} from "./roles/roles.model";
 import { AuthModule } from './auth/auth.module';
 import {UserRoles} from "./roles/userRoles.model";
 import { AppGateway } from './app.gateway';
+import { ChatModule } from './chat/chat.module';
 
 
 @Module({
@@ -30,6 +31,7 @@ import { AppGateway } from './app.gateway';
     }),
     RolesModule,
     AuthModule,
+    ChatModule,
   ],
   controllers: [AppController],
   providers: [AppService, AppGateway],

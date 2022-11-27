@@ -1,9 +1,7 @@
 import {ConflictException, Injectable} from '@nestjs/common';
-import {LoginUserDto} from "../auth/dto/loginUser.dto";
 import {CreateUserDto} from "./dto/createUser.dto";
 import {InjectModel} from "@nestjs/sequelize";
 import {User} from "./users.model";
-import * as bcrypt from 'bcrypt'
 import {RolesService} from "../roles/roles.service";
 
 @Injectable()
